@@ -11,6 +11,11 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "paths": {
+      "sat-prime": ["./projects/sat-prime/src/public-api.ts"],
+      "sat-prime/theme": ["./projects/sat-prime/theme/src/public-api.ts"],
+      "sat-prime/ui": ["./projects/sat-prime/ui/src/public-api.ts"]
+    },
     "target": "ES2022",
     "module": "preserve"
   },
@@ -19,5 +24,19 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/sat-prime/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/sat-prime/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/sat-prime-demo/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/sat-prime-demo/tsconfig.spec.json"
+    }
+  ]
 }

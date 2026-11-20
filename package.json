@@ -3,27 +3,51 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "ng serve SatPrimeDemo",
+    "build": "ng build sat-prime",
+    "build:lib": "ng build sat-prime",
+    "build:demo": "ng build SatPrimeDemo",
+    "watch": "ng build sat-prime --watch --configuration development",
+    "test": "ng test sat-prime",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build -o dist/storybook/sat-prime",
+    "test:visual": "playwright test --grep @visual",
+    "test:a11y": "playwright test --grep @a11y"
   },
   "private": true,
   "packageManager": "npm@11.19.1",
   "dependencies": {
+    "@angular/cdk": "^22.2.6",
     "@angular/common": "^22.2.0",
     "@angular/compiler": "^22.2.0",
     "@angular/core": "^22.2.0",
     "@angular/forms": "^22.2.0",
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
+    "@primeuix/themes": "^3.1.0",
+    "primeng": "^22.1.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^2.9.6",
+    "@angular/build": "^22.2.6",
     "@angular/cli": "^22.2.6",
     "@angular/compiler-cli": "^22.2.0",
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@storybook/addon-a11y": "^10.6.5",
+    "@storybook/addon-docs": "^10.6.5",
+    "@storybook/addon-themes": "^10.6.5",
+    "@storybook/angular-vite": "^10.6.5",
+    "http-server": "^14.1.1",
+    "jsdom": "^30.0.0",
+    "ng-packagr": "^22.2.0",
     "prettier": "^3.8.1",
-    "typescript": "~6.0.2"
+    "sass-embedded": "^1.107.1",
+    "storybook": "^10.6.5",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.0.0"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/storybook",
+    "types": []
+  },
+  "include": ["../projects/sat-prime/**/*.ts", "./**/*.ts"],
+  "exclude": ["../projects/sat-prime/**/*.spec.ts"]
+}
